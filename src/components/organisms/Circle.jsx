@@ -16,6 +16,7 @@ export default function Circle({
         handleColor={(e) => setCircleColor(e.target.value)}
         handleSize={(e) => setCircleSize(Number(e.target.value))}
       />
+      {/* En lugar de css utilizaria SVG y crearia componentes a nivel de atoms para cada forma. En este nivel combinarlos para conseguir la funcionalidad que quieres */}
       <div
         style={{
           margin: '1rem',
