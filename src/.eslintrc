@@ -3,6 +3,12 @@
     "rules": {
         "react/prop-types": "warn",
         "react/require-default-props": "off",
-        "semi": "off"
+        "semi": "off",
+        "jsx-a11y/label-has-associated-control": [ 2, {
+            "labelComponents": ["CustomInputLabel"],
+            "labelAttributes": ["label"],
+            "controlComponents": ["CustomInput"],
+            "depth": 3
+          }]
     }
 }

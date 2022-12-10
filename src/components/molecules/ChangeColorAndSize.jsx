@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Span, InputSize, InputColor } from '../atoms'
+import { Label, InputSize, InputColor } from '../atoms'
 
 // Este componente es poco explicito, no se entiende bien que hace
 export default function ChangeColorAndSize({
@@ -12,19 +12,28 @@ export default function ChangeColorAndSize({
     <>
       <div>
         {/* Un input debería de tener un label asociado */}
-        <Span>
+
+        <Label htmlFor="inputSize">
           {text}
           size
-        </Span>
-        {/* Le falta id, name y mejor que handleSize, onChange */}
-        <InputSize onChangeSize={onChangeSize} />
+          {/* Le falta id, name y mejor que handleSize, onChange */}
+          <InputSize
+            id="inputSize"
+            name="inputSize"
+            onChangeSize={onChangeSize}
+          />
+        </Label>
       </div>
       <div>
-        <Span>
+        <Label htmlFor="inputColor">
           {text}
           color
-        </Span>
-        <InputColor onChangeColor={onChangeColor} />
+          <InputColor
+            id="inputColor"
+            name="inputColor"
+            onChangeColor={onChangeColor}
+          />
+        </Label>
       </div>
     </>
   )
