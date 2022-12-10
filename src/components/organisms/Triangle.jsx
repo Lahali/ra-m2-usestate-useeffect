@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ActionFields from '../molecules/ActionFields'
+import ActionFields from '../molecules/ChangeColorAndSize'
 
 export default function Triangle({
   triangleColor,
@@ -14,8 +14,8 @@ export default function Triangle({
     <div style={{ padding: '2rem' }}>
       <ActionFields
         text={text}
-        handleColor={(e) => setTriangleColor(e.target.value)}
-        handleSize={(e) => setTriangleSize(Number(e.target.value))}
+        onChangeColor={(e) => setTriangleColor(e.target.value)}
+        onChangeSize={(e) => setTriangleSize(Number(e.target.value))}
       />
       <div
         style={{

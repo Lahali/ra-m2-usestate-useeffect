@@ -5,7 +5,11 @@ import InputSize from '../atoms/InputSize'
 import Span from '../atoms/Span'
 
 // Este componente es poco explicito, no se entiende bien que hace
-export default function ActionFields({ handleColor, handleSize, text }) {
+export default function ChangeColorAndSize({
+  onChangeColor,
+  onChangeSize,
+  text,
+}) {
   return (
     <>
       <div>
@@ -15,21 +19,21 @@ export default function ActionFields({ handleColor, handleSize, text }) {
           size
         </Span>
         {/* Le falta id, name y mejor que handleSize, onChange */}
-        <InputSize handleSize={handleSize} />
+        <InputSize onChangeSize={onChangeSize} />
       </div>
       <div>
         <Span>
           {text}
           color
         </Span>
-        <InputColor handleColor={handleColor} />
+        <InputColor onChangeColor={onChangeColor} />
       </div>
     </>
   )
 }
 
-ActionFields.propTypes = {
-  handleColor: PropTypes.func,
-  handleSize: PropTypes.func,
+ChangeColorAndSize.propTypes = {
+  onChangeColor: PropTypes.func,
+  onChangeSize: PropTypes.func,
   text: PropTypes.string,
 }

@@ -5,14 +5,18 @@ import dimensions from '../styles/dimensions'
 // Llamar al handleSize, onChange, sera más facil reusar más adelante
 export default function InputSize({
   inputWidth = dimensions.xxxl,
-  handleSize,
+  onChangeSize,
 }) {
   return (
-    <input style={{ width: inputWidth }} type="number" onChange={handleSize} />
+    <input
+      style={{ width: inputWidth }}
+      type="number"
+      onChange={onChangeSize}
+    />
   )
 }
 
 InputSize.propTypes = {
   inputWidth: PropTypes.string,
-  handleSize: PropTypes.func,
+  onChangeSize: PropTypes.func,
 }

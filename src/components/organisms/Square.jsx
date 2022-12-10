@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ActionFields from '../molecules/ActionFields'
+import ActionFields from '../molecules/ChangeColorAndSize'
 
 export default function Square({
   squareColor,
@@ -14,8 +14,8 @@ export default function Square({
     <div style={{ padding: '2rem' }}>
       <ActionFields
         text={text}
-        handleColor={(e) => setSquareColor(e.target.value)}
-        handleSize={(e) => setSquareSize(Number(e.target.value))}
+        onChangeColor={(e) => setSquareColor(e.target.value)}
+        onChangeSize={(e) => setSquareSize(Number(e.target.value))}
       />
       <div
         style={{

@@ -6,8 +6,6 @@ import Square from './components/organisms/Square'
 import Triangle from './components/organisms/Triangle'
 
 function App({ fontSize = dimensions.xl }) {
-  // Dejar colores y tamaños distintos por defecto, sino,
-  // no puedo ni llegar a ver el fronto por los alerts
   const [triangleSize, setTriangleSize] = useState(50)
   const [triangleColor, setTriangleColor] = useState('#C70039')
   const [circleColor, setCircleColor] = useState('#FFC300')
@@ -15,7 +13,6 @@ function App({ fontSize = dimensions.xl }) {
   const [squareColor, setSquareColor] = useState('#808B96')
   const [squareSize, setSquareSize] = useState(100)
 
-  // Lo pondría en dos useEffect separados
   useEffect(() => {
     if (triangleColor === squareColor && squareColor === circleColor) {
       // eslint-disable-next-line no-alert, no-undef
