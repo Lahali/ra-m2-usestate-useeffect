@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ActionFields from '../molecules/ChangeColorAndSize'
-import SquareSvg from '../atoms/SquareSvg'
+import ChangeColorAndSize from '../molecules/ChangeColorAndSize'
+import { SquareSvg } from '../atoms'
 
 export default function Square({
   squareColor,
@@ -13,7 +13,7 @@ export default function Square({
 
   return (
     <div style={{ padding: '2rem' }}>
-      <ActionFields
+      <ChangeColorAndSize
         text={text}
         onChangeColor={(e) => setSquareColor(e.target.value)}
         onChangeSize={(e) => setSquareSize(Number(e.target.value))}

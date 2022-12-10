@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ActionFields from '../molecules/ChangeColorAndSize'
-import CircleSvg from '../atoms/CircleSvg'
+import ChangeColorAndSize from '../molecules/ChangeColorAndSize'
+import { CircleSvg } from '../atoms'
 
 export default function Circle({
   circleColor,
@@ -12,7 +12,7 @@ export default function Circle({
   const text = 'Circle '
   return (
     <div style={{ padding: '2rem' }}>
-      <ActionFields
+      <ChangeColorAndSize
         text={text}
         onChangeColor={(e) => setCircleColor(e.target.value)}
         onChangeSize={(e) => setCircleSize(Number(e.target.value))}

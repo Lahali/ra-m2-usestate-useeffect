@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import dimensions from './components/styles/dimensions'
-import Circle from './components/organisms/Circle'
-import Square from './components/organisms/Square'
-import Triangle from './components/organisms/Triangle'
+import { Circle, Square, Triangle } from './components/organisms'
 
 function App({ fontSize = dimensions.xl }) {
   const [triangleSize, setTriangleSize] = useState(50)

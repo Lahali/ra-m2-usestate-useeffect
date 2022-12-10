@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ActionFields from '../molecules/ChangeColorAndSize'
-import TriangleSvg from '../atoms/TriangleSvg'
+import ChangeColorAndSize from '../molecules/ChangeColorAndSize'
+import { TriangleSvg } from '../atoms'
 
 export default function Triangle({
   triangleColor,
@@ -13,7 +13,7 @@ export default function Triangle({
 
   return (
     <div style={{ padding: '1rem' }}>
-      <ActionFields
+      <ChangeColorAndSize
         text={text}
         onChangeColor={(e) => setTriangleColor(e.target.value)}
         onChangeSize={(e) => setTriangleSize(Number(e.target.value))}

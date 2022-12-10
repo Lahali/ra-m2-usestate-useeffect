@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import InputColor from '../atoms/InputColor'
-import InputSize from '../atoms/InputSize'
-import Span from '../atoms/Span'
+import { Span, InputSize, InputColor } from '../atoms'
 
 // Este componente es poco explicito, no se entiende bien que hace
 export default function ChangeColorAndSize({
