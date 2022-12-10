@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ActionFields from '../molecules/ChangeColorAndSize'
+import TriangleSvg from '../atoms/TriangleSvg'
 
 export default function Triangle({
   triangleColor,
@@ -11,22 +12,13 @@ export default function Triangle({
   const text = 'Triangle '
 
   return (
-    <div style={{ padding: '2rem' }}>
+    <div style={{ padding: '1rem' }}>
       <ActionFields
         text={text}
         onChangeColor={(e) => setTriangleColor(e.target.value)}
         onChangeSize={(e) => setTriangleSize(Number(e.target.value))}
       />
-      <div
-        style={{
-          margin: '1rem',
-          width: '0',
-          height: '0',
-          borderLeft: `${triangleSize}px solid transparent`,
-          borderRight: `${triangleSize}px solid transparent`,
-          borderBottom: `${triangleSize * 1.5}px solid ${triangleColor}`,
-        }}
-      />
+      <TriangleSvg triangleSize={triangleSize} triangleColor={triangleColor} />
     </div>
   )
 }
