@@ -6,32 +6,29 @@ import Square from './components/organisms/Square'
 import Triangle from './components/organisms/Triangle'
 
 function App({ fontSize = dimensions.xl }) {
-  // Dejar colores y tamaños distintos por defecto, sino, no puedo ni llegar a ver el fronto por los alerts
-  const [triangleSize, setTriangleSize] = useState(100)
-  const [triangleColor, setTriangleColor] = useState('#000000')
-  const [circleColor, setCircleColor] = useState('#000000')
-  const [circleSize, setCircleSize] = useState(100)
-  const [squareColor, setSquareColor] = useState('#000000')
+  // Dejar colores y tamaños distintos por defecto, sino,
+  // no puedo ni llegar a ver el fronto por los alerts
+  const [triangleSize, setTriangleSize] = useState(50)
+  const [triangleColor, setTriangleColor] = useState('#C70039')
+  const [circleColor, setCircleColor] = useState('#FFC300')
+  const [circleSize, setCircleSize] = useState(75)
+  const [squareColor, setSquareColor] = useState('#808B96')
   const [squareSize, setSquareSize] = useState(100)
 
   // Lo pondría en dos useEffect separados
+  useEffect(() => {
+    if (triangleColor === squareColor && squareColor === circleColor) {
+      // eslint-disable-next-line no-alert, no-undef
+      alert('Todas las figuras tienen el mismo color')
+    }
+  }, [triangleColor, squareColor, circleColor])
+
   useEffect(() => {
     if (triangleSize === squareSize && squareSize === circleSize) {
       // eslint-disable-next-line no-alert, no-undef
       alert('Todas las figuras tienen el mismo tamaño')
     }
-    if (triangleColor === squareColor && squareColor === circleColor) {
-      // eslint-disable-next-line no-alert, no-undef
-      alert('Todas las figuras tienen el mismo color')
-    }
-  }, [
-    triangleColor,
-    squareColor,
-    circleColor,
-    triangleSize,
-    squareSize,
-    circleSize,
-  ])
+  }, [triangleSize, squareSize, circleSize])
 
   return (
     <div className="App">
