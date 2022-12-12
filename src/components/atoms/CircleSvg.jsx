@@ -6,7 +6,7 @@ export default function CircleSvg({ circleColor, circleSize }) {
     <svg
       style={{
         width: `${circleSize * 2}`,
-        heigth: `${circleSize * 2}`,
+        height: `${circleSize * 2}`,
         margin: '1rem',
       }}
     >

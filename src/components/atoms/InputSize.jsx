@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import dimensions from '../styles/dimensions'
 
-// Llamar al handleSize, onChange, sera más facil reusar más adelante
 export default function InputSize({
   inputWidth = dimensions.xxxl,
   onChangeSize,

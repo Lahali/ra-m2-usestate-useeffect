@@ -17,8 +17,6 @@ export default function Circle({
         onChangeColor={(e) => setCircleColor(e.target.value)}
         onChangeSize={(e) => setCircleSize(Number(e.target.value))}
       />
-      {/* En lugar de css utilizaria SVG y crearia componentes a nivel de atoms para cada forma.
-      En este nivel combinarlos para conseguir la funcionalidad que quieres */}
       <CircleSvg circleColor={circleColor} circleSize={circleSize} />
     </div>
   )

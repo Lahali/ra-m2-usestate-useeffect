@@ -6,7 +6,7 @@ export default function TriangleSvg({ triangleSize, triangleColor }) {
     <svg
       style={{
         width: `${triangleSize * 1.5}`,
-        height: { triangleSize },
+        height: `${triangleSize}`,
         margin: '1rem',
       }}
     >

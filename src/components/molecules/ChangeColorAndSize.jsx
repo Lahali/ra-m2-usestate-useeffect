@@ -11,12 +11,9 @@ export default function ChangeColorAndSize({
   return (
     <>
       <div>
-        {/* Un input debería de tener un label asociado */}
-
         <Label htmlFor="inputSize">
           {text}
           size
-          {/* Le falta id, name y mejor que handleSize, onChange */}
           <InputSize
             id="inputSize"
             name="inputSize"
