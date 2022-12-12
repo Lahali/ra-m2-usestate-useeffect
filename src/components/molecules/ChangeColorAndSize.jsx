@@ -15,6 +15,7 @@ export default function ChangeColorAndSize({
           {text}
           size
           <InputSize
+            // Si renderizas 3 moleculas con inputSize lso labels de cada uno van a tener el mismo id, y solo puede haber un elemento con ese id en el DOM
             id="inputSize"
             name="inputSize"
             onChangeSize={onChangeSize}
@@ -22,6 +23,7 @@ export default function ChangeColorAndSize({
         </Label>
       </div>
       <div>
+        {/* Te recomiendo crear dos componentes en molecules: InputNumberGroup y InputColorNumber. Ambos contienen Label + InputNumber */}
         <Label htmlFor="inputColor">
           {text}
           color
