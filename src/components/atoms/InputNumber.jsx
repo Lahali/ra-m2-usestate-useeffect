@@ -3,20 +3,26 @@ import PropTypes from 'prop-types'
 import dimensions from '../styles/dimensions'
 
 // Llama este componente InputNumber, sera más fácil de usar en el futuro.
-export default function InputSize({
+export default function InputNumber({
   inputWidth = dimensions.xxxl,
-  onChangeSize,
+  onChange,
+  type,
+  id,
 }) {
   return (
     <input
       style={{ width: inputWidth }}
-      type="number"
-      onChange={onChangeSize}
+      type={type}
+      id={id}
+      name={id}
+      onChange={onChange}
     />
   )
 }
 
-InputSize.propTypes = {
+InputNumber.propTypes = {
   inputWidth: PropTypes.string,
-  onChangeSize: PropTypes.func,
+  onChange: PropTypes.func,
+  type: PropTypes.string,
+  id: PropTypes.string,
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ChangeColorAndSize from '../molecules/ChangeColorAndSize'
 import { TriangleSvg } from '../atoms'
+import { InputColorNumber, InputNumberGroup } from '../molecules'
 
 export default function Triangle({
   triangleColor,
@@ -10,14 +10,21 @@ export default function Triangle({
   setTriangleSize,
 }) {
   const text = 'Triangle '
-
+  const idColor = 'triangleInputColor'
+  const idNumber = 'triangleInputNumber'
   return (
     <div style={{ padding: '1rem' }}>
-      <ChangeColorAndSize
+      <InputColorNumber
         text={text}
         onChangeColor={(e) => setTriangleColor(e.target.value)}
-        onChangeSize={(e) => setTriangleSize(Number(e.target.value))}
+        id={idColor}
       />
+      <InputNumberGroup
+        text={text}
+        onChangeSize={(e) => setTriangleSize(Number(e.target.value))}
+        id={idNumber}
+      />
+
       <TriangleSvg triangleSize={triangleSize} triangleColor={triangleColor} />
     </div>
   )
